@@ -1,0 +1,768 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Navbar improvements */
+.navbar {
+  min-height: 64px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  padding: 8px 0 !important;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: #333 !important;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #387ed1 !important;
+}
+
+
+.navbar-collapse {
+  display: flex !important;
+  flex-basis: auto !important;
+}
+
+.navbar-toggler {
+  border: 1px solid #e0e0e0 !important;
+  padding: 4px 8px !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.1rem rgba(56, 126, 209, 0.25) !important;
+}
+
+/* Dropdown improvements */
+.dropdown-menu {
+  min-width: 180px;
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item:active {
+  background-color: #e5e5e5;
+}
+
+/* Ensure navbar doesn't hide on mobile */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 16px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 16px;
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-item {
+    width: 100%;
+    margin: 4px 0;
+  }
+  
+  .navbar-nav .nav-link {
+    width: 100%;
+    padding: 10px 16px !important;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.nav-link{
+  margin-left: 40px;
+}
+
+#supportHero{
+  background-color: rgb(56, 126, 209);
+  color: white;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#supportHero a{
+  color: white;
+  text-decoration: none;
+}
+
+#supportHero a:hover{
+  text-decoration: underline;
+}
+
+#supportWrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 150px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#supportHero input{
+  padding: 20px 50px;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.support-input {
+  padding: 15px 20px !important;
+  font-size: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.support-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.support-links a {
+  white-space: nowrap;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  #supportWrapper {
+    flex-direction: column;
+    align-items: flex-start !important;
+    margin: 0 !important;
+    gap: 15px;
+  }
+  
+  #supportWrapper h4 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  #supportWrapper a {
+    font-size: 0.95rem;
+  }
+  
+  .support-input {
+    padding: 15px 20px !important;
+    font-size: 16px !important;
+  }
+  
+  .hero-image {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem !important;
+    line-height: 1.3;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important;
+    padding: 0 15px;
+    line-height: 1.5;
+  }
+  
+  .hero-button {
+    width: 90% !important;
+    max-width: 100% !important;
+    font-size: 1rem !important;
+    padding: 12px 20px !important;
+  }
+  
+  #supportHero .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  #supportHero .col-12 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .nav-link {
+    margin-left: 0 !important;
+  }
+  
+  #supportWrapper {
+    margin: 0 20px !important;
+    padding: 15px !important;
+  }
+  
+  #supportHero .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #supportWrapper {
+    margin: 0 50px !important;
+  }
+}
+
+/* Tablet and medium screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Better button responsiveness */
+.btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .card {
+    margin: 0 10px;
+  }
+  
+  .lead {
+    font-size: 1rem !important;
+  }
+  
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .navbar-brand {
+    font-size: 20px !important;
+  }
+  
+  .fs-2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .fs-3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .fs-4 {
+    font-size: 1.1rem !important;
+  }
+  
+  .fs-5 {
+    font-size: 1rem !important;
+  }
+  
+  .p-5 {
+    padding: 1.5rem !important;
+  }
+  
+  .mt-5 {
+    margin-top: 2rem !important;
+  }
+  
+  .mb-5 {
+    margin-bottom: 2rem !important;
+  }
+  
+  .border {
+    border-width: 1px !important;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  ol {
+    padding-left: 20px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  .hero-button {
+    max-width: 250px !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .hero-button {
+    max-width: 280px !important;
+  }
+  
+  #supportWrapper {
+    margin: 0 30px !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Ultra wide screens */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Improve form responsiveness */
+@media (max-width: 767.98px) {
+  .form-control {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px 15px;
+  }
+  
+  .alert {
+    font-size: 0.9rem;
+    padding: 12px 15px;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Better text wrapping */
+@media (max-width: 991.98px) {
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Improve button touch targets on mobile */
+@media (max-width: 767.98px) {
+  .btn {
+    min-height: 44px; /* iOS recommended touch target */
+    min-width: 44px;
+    padding: 10px 20px;
+  }
+  
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Fix overflow issues */
+@media (max-width: 991.98px) {
+  .row {
+    overflow-x: hidden;
+  }
+  
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Improve spacing for mobile */
+@media (max-width: 767.98px) {
+  .mb-5 {
+    margin-bottom: 2rem !important;
+  }
+  
+  .mt-5 {
+    margin-top: 2rem !important;
+  }
+  
+  .p-5 {
+    padding: 1.5rem !important;
+  }
+  
+  .p-3 {
+    padding: 1rem !important;
+  }
+}
+
+/* Better image handling */
+@media (max-width: 767.98px) {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .text-center img {
+    margin: 0 auto;
+  }
+}
+
+/* Improve list responsiveness */
+@media (max-width: 767.98px) {
+  ul, ol {
+    padding-left: 25px;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Better table responsiveness */
+@media (max-width: 767.98px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Improve card responsiveness */
+@media (max-width: 767.98px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Fix navbar dropdown on mobile */
+@media (max-width: 991.98px) {
+  .dropdown-menu {
+    width: 100%;
+    position: static !important;
+    float: none;
+    margin-top: 0;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .dropdown-item {
+    padding: 12px 16px;
+  }
+  
+  .navbar-nav .nav-item.dropdown {
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-item.dropdown .nav-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Improve container responsiveness */
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Better text responsiveness */
+@media (max-width: 767.98px) {
+  .text-center {
+    text-align: center !important;
+  }
+  
+  .text-md-start {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-md-start {
+    text-align: left !important;
+  }
+}
+
+/* Improve spacing utilities */
+@media (max-width: 575.98px) {
+  .px-3 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  .px-md-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Better grid system for mobile */
+@media (max-width: 767.98px) {
+  [class*="col-"] {
+    margin-bottom: 1rem;
+  }
+  
+  .row > [class*="col-"]:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Improve card responsiveness */
+@media (max-width: 767.98px) {
+  .card {
+    border-radius: 8px;
+  }
+  
+  .card-header {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-footer {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Better list group responsiveness */
+@media (max-width: 767.98px) {
+  .list-group-item {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+  
+  .list-group-item-action {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Improve badge responsiveness */
+@media (max-width: 767.98px) {
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+  }
+}
+
+/* Better alert responsiveness */
+@media (max-width: 767.98px) {
+  .alert {
+    font-size: 0.9rem;
+    padding: 12px 15px;
+    margin-bottom: 1rem;
+  }
+  
+  .alert-dismissible .btn-close {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Improve form group spacing */
+@media (max-width: 767.98px) {
+  .mb-3 {
+    margin-bottom: 1rem !important;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem !important;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem !important;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Better border utilities */
+@media (max-width: 767.98px) {
+  .border {
+    border-width: 1px !important;
+  }
+  
+  .border-top {
+    border-top-width: 1px !important;
+  }
+  
+  .border-bottom {
+    border-bottom-width: 1px !important;
+  }
+}
+
+/* Improve footer responsiveness */
+@media (max-width: 767.98px) {
+  footer .col {
+    margin-bottom: 2rem;
+  }
+  
+  footer .col:last-child {
+    margin-bottom: 0;
+  }
+  
+  footer p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  
+  footer a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Prevent horizontal scroll */
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Better image container */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve button groups */
+@media (max-width: 767.98px) {
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-group .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-group .btn:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Better d-flex utilities on mobile */
+@media (max-width: 767.98px) {
+  .d-flex {
+    flex-wrap: wrap;
+  }
+  
+  .gap-2 {
+    gap: 0.5rem !important;
+  }
+  
+  .gap-3 {
+    gap: 0.75rem !important;
+  }
+}
