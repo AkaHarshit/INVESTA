@@ -15,7 +15,7 @@ function LeftSection({imageURL,productName,productDescription,tryDemo,learnMore,
                     </div>
                     <div className='mt-3 text-center text-md-start'>
                         <a href={googlePlay}><img src="/media/images/googlePlayBadge.svg" style={{maxWidth: '150px', height: 'auto'}} alt="Get it on Google Play" /></a>
-                        <a href={appStore} className='ms-md-5' style={{marginLeft:"20px"}}><img src="/media/images/appStoreBadge.svg" style={{maxWidth: '150px', height: 'auto'}} alt="Download on the App Store" /></a>
+                        <a href={appStore} className='ms-md-5' style={{marginLeft:"20px"}}><img src="/media/images/appstoreBadge.svg" style={{maxWidth: '150px', height: 'auto'}} alt="Download on the App Store" /></a>
                     </div>
 
                 </div>
