@@ -6,31 +6,31 @@ const Apps = () => {
     {
       name: "Kite",
       description: "Our ultra-fast flagship trading platform with streaming market data, advanced charts, an elegant UI, and more. Enjoy the Kite experience seamlessly on your Android and iOS devices.",
-      image: "http://localhost:3001/media/images/kite.png",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/kite.png`,
       category: "Trading Platform"
     },
     {
       name: "Console",
       description: "The central dashboard for your Investa account. Gain insights into your trades and investments with in-depth reports and visualisations.",
-      image: "http://localhost:3001/media/images/console.png",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/console.png`,
       category: "Dashboard"
     },
     {
       name: "Coin",
       description: "Buy direct mutual funds online, commission-free, delivered directly to your Demat account. Enjoy the investment experience on your Android and iOS devices.",
-      image: "http://localhost:3001/media/images/coin.png",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/coin.png`,
       category: "Mutual Funds"
     },
     {
       name: "Kite Connect API",
       description: "Build powerful trading platforms and experiences with our super simple HTTP/JSON APIs. If you are a startup, build your investment app and showcase it to our clientbase.",
-      image: "http://localhost:3001/media/images/kiteconnect.png",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/kiteconnect.png`,
       category: "API Platform"
     },
     {
       name: "Varsity Mobile",
       description: "An easy to grasp, collection of stock market lessons with in-depth coverage and illustrations. Content is broken down into bite-size cards to help you learn on the go.",
-      image: "http://localhost:3001/media/images/varsity.png",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/varsity.png`,
       category: "Education"
     }
   ];
@@ -39,37 +39,37 @@ const Apps = () => {
     {
       name: "Smallcase",
       description: "Thematic investing platform that helps you invest in diversified baskets of stocks on ETFs.",
-      image: "http://localhost:3001/media/images/smallcaseLogo.png",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/smallcaseLogo.png`,
       category: "Partner Platform"
     },
     {
       name: "Streak",
       description: "Systematic trading platform that allows you to create and backtest strategies without coding.",
-      image: "http://localhost:3001/media/images/streakLogo.png",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/streakLogo.png`,
       category: "Partner Platform"
     },
     {
       name: "Ditto",
       description: "Personalized advice on life and health insurance. No spam and no mis-selling.",
-      image: "http://localhost:3001/media/images/dittoLogo.png",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/dittoLogo.png`,
       category: "Partner Platform"
     },
     {
       name: "Sensibull",
       description: "Options trading platform that lets you create strategies, analyze positions, and examine data points like open interest, FII/DII, and more.",
-      image: "http://localhost:3001/media/images/sensibullLogo.svg",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/sensibullLogo.svg`,
       category: "Partner Platform"
     },
     {
       name: "Tijori",
       description: "Investment research platform that offers detailed insights on stocks, sectors, supply chains, and more.",
-      image: "http://localhost:3001/media/images/tijori.svg",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/tijori.svg`,
       category: "Partner Platform"
     },
     {
       name: "GoldenPi",
       description: "An online platform that enables investors to discover, analyze, and invest in high-quality fixed-income instruments.",
-      image: "http://localhost:3001/media/images/goldenpiLogo.png",
+      image: `${process.env.PUBLIC_URL || ""}/media/images/goldenpiLogo.png`,
       category: "Partner Platform"
     }
   ];

@@ -51,7 +51,8 @@ function Universe() {
     const userData = localStorage.getItem('user');
     if (token) {
       const userDataParam = userData ? encodeURIComponent(userData) : '';
-      window.location.href = `http://localhost:3000?token=${encodeURIComponent(token)}${userData ? '&user=' + userDataParam : ''}`;
+      const dashboardUrl = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001";
+      window.location.href = `${dashboardUrl}?token=${encodeURIComponent(token)}${userData ? '&user=' + userDataParam : ''}`;
     } else {
       navigate('/login');
     }

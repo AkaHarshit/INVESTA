@@ -91,7 +91,8 @@ function ProfilePage() {
                     e.preventDefault();
                     const token = localStorage.getItem('token');
                     if (token) {
-                      window.location.href = `http://localhost:3000?token=${encodeURIComponent(token)}`;
+                      const dashboardUrl = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001";
+                      window.location.href = `${dashboardUrl}?token=${encodeURIComponent(token)}`;
                     } else {
                       alert('Please login first');
                     }

@@ -28,7 +28,8 @@ function Signup() {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3002/signup", formData);
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3002";
+      const response = await axios.post(`${apiUrl}/signup`, formData);
       
       setSuccess("Account created successfully! Redirecting to login...");
       

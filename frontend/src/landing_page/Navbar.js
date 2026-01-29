@@ -58,7 +58,8 @@ function Navbar() {
     if (token) {
       // Open dashboard in the same window with token and user data
       const userDataParam = userData ? encodeURIComponent(userData) : '';
-      window.location.href = `http://localhost:3000?token=${encodeURIComponent(token)}${userData ? '&user=' + userDataParam : ''}`;
+      const dashboardUrl = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001";
+      window.location.href = `${dashboardUrl}?token=${encodeURIComponent(token)}${userData ? '&user=' + userDataParam : ''}`;
     } else {
       alert('Please login first');
       navigate('/login');

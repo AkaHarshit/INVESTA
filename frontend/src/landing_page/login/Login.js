@@ -24,7 +24,8 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3002/login", formData);
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3002";
+      const response = await axios.post(`${apiUrl}/login`, formData);
       
       // Save token and user data to localStorage
       localStorage.setItem("token", response.data.token);

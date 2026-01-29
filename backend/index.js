@@ -176,11 +176,27 @@ app.post("/newOrder", authMiddleware, async (req, res) => {
 // =============================================
 // START SERVER
 // =============================================
+// MongoDB connection options – help avoid TLS handshake errors with Atlas (Node 18+ recommended)
+const mongooseOptions = {
+  serverSelectionTimeoutMS: 10000,
+  ...(uri && uri.startsWith("mongodb+srv") && {
+    tls: true,
+    tlsAllowInvalidCertificates: false,
+  }),
+};
+
 app.listen(PORT, () => {
   console.log("🚀 Server started on port " + PORT);
-  mongoose.connect(uri).then(() => {
+  if (!uri) {
+    console.error("❌ MONGO_URL is not set. Add it to your .env file.");
+    return;
+  }
+  mongoose.connect(uri, mongooseOptions).then(() => {
     console.log("✅ MongoDB connected!");
   }).catch((err) => {
     console.error("❌ MongoDB error:", err);
+    if (err.message && err.message.includes("SSL") || (err.cause && String(err.cause).includes("SSL"))) {
+      console.error("💡 Tip: MongoDB Atlas requires TLS 1.2+. Use Node.js 18 or 20 (node -v). Check Atlas IP whitelist and connection string.");
+    }
   });
 });

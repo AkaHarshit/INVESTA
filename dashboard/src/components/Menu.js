@@ -92,7 +92,8 @@ const Menu = () => {
     localStorage.removeItem("user");
     // Dispatch custom event to notify other components
     window.dispatchEvent(new Event("userDataUpdated"));
-    window.location.href = "http://localhost:3001/";
+    const frontendUrl = process.env.REACT_APP_FRONTEND_URL || "http://localhost:3000";
+    window.location.href = `${frontendUrl}/`;
   };
 
   const menuClass = "menu";
@@ -212,7 +213,7 @@ const Menu = () => {
           {isProfileDropdownOpen && (
             <div className="profile-menu">
               <a 
-                href="http://localhost:3001/profile" 
+                href="/profile" 
                 className="profile-menu-item"
                 onClick={() => setIsProfileDropdownOpen(false)}
               >
